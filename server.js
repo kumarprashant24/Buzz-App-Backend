@@ -141,5 +141,5 @@ mongoose.connect(MONGO_URI, (err) => {
   !err && console.log('connected to database');
   err && console.log(err.message);
 });
-
-server.listen(PORT, () => console.log('Server running at port', PORT));
+const p = process.env.PORT;
+server.listen(p, () => console.log('Server running at port', p));
