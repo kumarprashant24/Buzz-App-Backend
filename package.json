@@ -100,7 +100,8 @@
   },
   "scripts": {
     "test": "jest --watchAll",
-    "start": "nodemon server.js"
+    "start": "node server.js",
+    "start-dev": "nodemon server.js"
   },
   "keywords": [],
   "author": "",

@@ -13,7 +13,6 @@ const io = require('socket.io')(server, {
   }
 });
 let room = "";
-console.log("checking port - "+PORT);
 // =================Socket logic======================================
 io.on('connection', (socket) => {
 
@@ -141,5 +140,5 @@ mongoose.connect(MONGO_URI, (err) => {
   !err && console.log('connected to database');
   err && console.log(err.message);
 });
-const p = process.env.PORT;
-server.listen(p, () => console.log('Server running at port', p));
+
+server.listen(PORT, () => console.log('Server running at port', PORT));
