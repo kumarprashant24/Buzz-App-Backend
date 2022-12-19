@@ -13,6 +13,7 @@ const io = require('socket.io')(server, {
   }
 });
 let room = "";
+console.log("checking port - "+PORT);
 // =================Socket logic======================================
 io.on('connection', (socket) => {
 
