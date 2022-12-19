@@ -131,9 +131,11 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Routes
-app.post('/',(req,res)=>{
-  res.send("hello")
-})
+app.get('/', (req, res) => {
+
+  res.send("hello world");
+ 
+});
 app.use('/api', require('./routes/index'));
 
 mongoose.connect(MONGO_URI, (err) => {
